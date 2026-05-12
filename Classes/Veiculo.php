@@ -16,43 +16,43 @@
         }
 
         public function getPlaca(): string {
-            return $this->$placa;
+            return $this->placa;
         }
 
         public function setPlaca(string $placa): void {
-            $this->$placa = $placa;
+            $this->placa = $placa;
         }
 
         public function getModelo(): string {
-            return $this->$modelo;
+            return $this->modelo;
         }
 
         public function setmodelo(string $modelo): void {
-            $this->$modelo = $modelo;
+            $this->modelo = $modelo;
         }
 
         public function getcapacidadeTaque(): float {
-            return $this->$capacidadeTanque;
+            return $this->capacidadeTanque;
         }
 
         public function setcapacidadeTaque(float $capacidadeTanque): void {
-            $this->$capacidadeTanque = $capacidadeTanque;
+            $this->capacidadeTanque = $capacidadeTanque;
         }
 
         public function getcombustivelAtual(): float {
-            return $this->$combustivelAtual;
+            return $this->combustivelAtual;
         }
 
         public function setcombustivelAtual(float $combustivelAtual) {
-            $this->$combustivelAtual = $combustivelAtual;
+            $this->combustivelAtual = $combustivelAtual;
         }
 
         public function abastecer(float $litros): void {
-            if (($this->$combustivelAtual + $litros) >= $this->$capacidadeTanque) {
+            if (($this->combustivelAtual + $litros) >= $this->capacidadeTanque) {
                 echo "Capacidade do Tanque";
 
             } else {
-                $this->$combustivelAtual >= $litros;
+                $this->combustivelAtual >= $litros;
                 echo "Abatecimesto feito com sucesso";
             }
         }
@@ -60,12 +60,12 @@
         public function viajar(float $distancia): void {
             $consumo = $distancia / 10;
 
-            if ($this->$combustivelAtual == 0){
+            if ($this->combustivelAtual == 0){
                 echo "Combustivel insuficiente para viagem";
             } else {
-                while($combustivelAtual > 0) {
-                    $this->combustivelAtual = $combustivelAtual - $consumo;
-                    if($combustivelAtual == 0) {
+                while($this->combustivelAtual > 0) {
+                    $this->combustivelAtual = $this->combustivelAtual - $consumo;
+                    if($this->combustivelAtual == 0) {
                         echo 'Viagem Encerrada! Combustivel Zerado!';
                     }
                 }
